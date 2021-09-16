@@ -1,5 +1,4 @@
 var express = require('express');
-var cors = require('cors');
 var { graphqlHTTP } = require('express-graphql');
 var { buildSchema } = require('graphql');
 
@@ -22,7 +21,6 @@ var root = {
 };
 
 var app = express();
-app.use(cors());
 app.use(
   '/',
   graphqlHTTP({
